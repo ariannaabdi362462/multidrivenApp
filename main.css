@@ -1,0 +1,306 @@
+@font-face {
+  font-family: 'headings';
+  src: url(HeadingText.otf); }
+@font-face {
+  font-family: 'main';
+  src: url(MainText.ttf); }
+body {
+  background-color: #3d3d3d;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'main';
+  background-image: url("images/vinylbackground2.jpg"); }
+
+#logo {
+  margin-left: 20px;
+  height: 30px; }
+
+#logo img {
+  height: 70px; }
+
+form input {
+  height: 30px;
+  width: 30vw;
+  margin: 50px;
+  font-size: 14px; }
+
+nav ul {
+  padding: 0; }
+
+nav li {
+  font-family: 'headings';
+  font-size: 20px;
+  display: inline-block;
+  list-style: none;
+  margin-right: 30px;
+  color: orange;
+  font-weight: 800px; }
+  @media screen and (max-width: 480px) {
+    nav li {
+      display: none; } }
+  @media screen and (max-width: 480px) and (max-width: 800px) {
+    nav li {
+      display: none; } }
+
+nav li:hover {
+  color: white; }
+
+#menu {
+  display: none;
+  height: 40px;
+  margin-right: 20px; }
+  @media screen and (max-width: 480px) {
+    #menu {
+      display: block; } }
+  @media screen and (max-width: 800px) {
+    #menu {
+      display: block; } }
+
+header {
+  background-color: #484849;
+  opacity: 0.8;
+  border: 5px solid grey;
+  border-radius: 9px;
+  margin: auto; }
+
+header {
+  display: flex;
+  /* displays flexbox*/
+  display: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-content: space-between; }
+
+.logo {
+  flex: 1; }
+
+ul {
+  flex: 1; }
+
+form {
+  flex: 1; }
+
+#menu {
+  flex: 1; }
+
+#HomeBanner {
+  clear: both;
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-image: url("images/BannerHome.png"); }
+
+#bannerAZ {
+  clear: both;
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-image: url("images/banneraz.png"); }
+
+#bandbanner {
+  clear: both;
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-image: url("images/rosesbanner.png"); }
+
+#nav2 {
+  padding: 0;
+  background-color: #161618;
+  opacity: 0.9;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center; }
+
+#nav2 li {
+  font-family: 'headings';
+  list-style: none;
+  display: inline;
+  margin-right: 50px;
+  margin-left: 50px; }
+
+#nav2 a {
+  font-size: 28px;
+  color: orange;
+  font-weight: 800px;
+  text-decoration: none; }
+
+#nav2 a:hover {
+  color: white; }
+
+.homewrapper {
+  /* displays the css grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-items: center;
+  margin-right: 20px;
+  margin-left: 0px;
+  grid-column-gap: 30px;
+  /* displays gaps throughout sections of the gird*/ }
+
+h2 {
+  padding-top: 20px;
+  padding-left: 20px; }
+
+h3 {
+  padding-left: 10px; }
+
+p {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.Musicvideo {
+  color: #bbbbc2;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 10px; }
+
+.news {
+  height: 700px;
+  width: auto;
+  overflow: auto;
+  border: 4px solid black;
+  background-color: #d86020;
+  color: black;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px; }
+
+li {
+  padding-left: 20px; }
+
+#oasis {
+  height: 200px;
+  width: 550px;
+  padding-left: 100px;
+  padding-right: 100px; }
+
+#blossoms {
+  height: 300px;
+  width: 500px;
+  padding-left: 150px;
+  padding-right: 100px; }
+
+#albums {
+  height: 300px;
+  width: 480px;
+  padding-left: 100px;
+  padding-right: 100px; }
+
+.StoneRosesImg {
+  color: #bbbbc2; }
+
+#RosesOld {
+  height: 500px;
+  width: 700px;
+  padding-left: 40px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.FindRoses {
+  color: #bbbbc2; }
+  .FindRoses a {
+    text-decoration: none;
+    color: #bbbbc2; }
+
+#RosesPerform {
+  height: 500px;
+  width: 700px;
+  padding-left: 40px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.moreInfo {
+  border: 4px solid #bbbbc2;
+  background-color: #3d3d3d;
+  opacity: 0.9;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  margin-left: 50px; }
+  .moreInfo a {
+    text-decoration: none;
+    color: #bbbbc2; }
+  .moreInfo ul {
+    padding: 0px; }
+  .moreInfo li {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    padding-top: 2 0px;
+    list-style-type: none; }
+    @media screen and (max-width: 480px) {
+      .moreInfo li {
+        padding: 0px 10px; } }
+  .moreInfo img {
+    width: 80px; }
+    @media screen and (max-width: 480px) {
+      .moreInfo img {
+        width: 40px; } }
+
+#social {
+  background-color: black;
+  opacity: 0.7;
+  padding: 30px;
+  clear: both;
+  text-align: center; }
+  #social ul {
+    padding: 0px; }
+  #social li {
+    display: inline;
+    padding: 0px 20px;
+    list-style-type: none; }
+    @media screen and (max-width: 480px) {
+      #social li {
+        padding: 0px 10px; } }
+  #social img {
+    width: 60px; }
+    @media screen and (max-width: 480px) {
+      #social img {
+        width: 40px; } }
+
+* {
+  box-sizing: border-box; }
+
+.column {
+  float: left;
+  width: 33.3%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 24;
+  color: orange;
+  display: block;
+  text-decoration: none;
+  background-color: grey;
+  opacity: 0.9; }
+  @media screen and (min-width: 481px) and (max-width: 800px) {
+    .column {
+      width: 100px; } }
+  @media screen and (max-width: 480px) {
+    .column {
+      width: 100px; } }
+
+.column a {
+  color: orange;
+  display: block;
+  padding: 10px;
+  padding-left: 20px;
+  text-decoration: none; }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+footer {
+  background-color: black;
+  height: 80px;
+  opacity: 0.7; }
+
+/*# sourceMappingURL=main.css.map */

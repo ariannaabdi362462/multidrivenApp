@@ -1,0 +1,454 @@
+@font-face{
+    font-family: 'headings';
+    src: url(HeadingText.otf);
+}
+
+@font-face{
+    font-family: 'main';
+    src: url(MainText.ttf);
+}
+
+// Mixins defined at the top so it works
+@mixin mobile(){
+	@media screen and (max-width:480px){
+		@content; //add content to code 
+	}
+}
+
+@mixin tablet() {
+	@media screen and (max-width:800px){
+	@content;
+	}
+}
+
+@mixin tablet-mobile() {
+    @media screen and (min-width: 481px) and (max-width: 800px) {
+        @content;
+    }
+}
+
+body{
+    background-color: rgb(61, 61, 61);
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'main';
+    background-image: url("images/vinylbackground2.jpg");
+    
+   
+   
+}
+#logo {
+	margin-left: 20px;
+	height: 30px;
+}
+
+#logo img {
+    height: 70px;
+
+}
+
+form input {
+	height: 30px;
+	width: 30vw;
+	margin: 50px;	
+	font-size: 14px;
+}
+
+
+nav ul {
+    padding: 0;
+}
+
+nav li {
+ 
+    font-family: 'headings';
+    font-size: 20px;
+	display: inline-block;
+	list-style: none;
+	margin-right: 30px;
+	color:  orange;
+    font-weight: 800px;
+
+    @include mobile(){
+        display:none; 
+        
+	@include tablet(){
+		display:none;
+	}
+}
+    
+}
+
+nav li:hover{ //when hovered change colour.
+color: white;
+}
+
+
+#menu{
+    
+    display: none; //Hide until screen size is changed
+	height: 40px;
+    margin-right: 20px;
+    
+    @include mobile(){
+		display:block; //displays image when changed to mobile sized screen 
+    }       
+	@include tablet(){
+		display:block; //Displays menu when changed to tablet sized screen 
+	}
+}
+
+header{
+    
+    background-color: rgb(72, 72, 73);
+    opacity: 0.8;
+    border: 5px solid grey;
+    border-radius: 9px;
+    margin:auto; 
+}
+
+header{
+	display:flex; /* displays flexbox*/
+	display:1fr 1fr 1fr 1fr;  
+	align-items: center;
+    justify-content:space-evenly ;
+    justify-content: space-between;
+}
+
+.logo{
+
+flex:1;
+}
+
+ul{
+flex:1;
+}
+
+form{
+flex:1;
+
+}
+
+#menu{
+    flex:1;
+}
+
+#HomeBanner { //homepage img
+    clear: both;
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-image: url("images/BannerHome.png");
+    }
+  
+#bannerAZ{ //contents page img
+    clear: both;
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-image: url("images/banneraz.png");
+}
+
+
+#bandbanner{ //info page img 
+    clear: both;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-image: url("images/rosesbanner.png");
+}
+
+
+
+
+//FIX THIS 
+#nav2{
+    padding: 0;
+    background-color:rgb(22, 22, 24) ;
+    opacity: 0.9;
+	padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;	
+}
+
+
+#nav2 li { //A-Z contents and News 
+    font-family: 'headings';
+      list-style: none;
+    display:inline;
+
+    margin-right: 50px;
+    margin-left:50px;
+    
+}
+
+#nav2 a{
+    font-size: 28px;
+    color: orange;
+    font-weight: 800px;
+    text-decoration: none;
+}
+
+#nav2 a:hover{
+color:white;
+}
+
+
+.homewrapper{
+	/* displays the css grid */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-items:center;
+	margin-right: 20px;
+	margin-left: 0px;
+	grid-column-gap:30px;   /* displays gaps throughout sections of the gird*/ 
+
+}
+
+h2{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+h3{
+    padding-left: 10px;
+}
+
+p{
+
+    padding-left:10px; 
+    padding-right:10px
+}
+
+
+.Musicvideo{
+    color: rgb(187, 187, 194);
+
+    // grid-row: 1;
+    // grid-column:1;
+    margin-left:40px;
+    margin-right: 40px;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+
+.news{ //info 
+//  grid-row: 1;
+    // grid-column: 2;
+    height:700px;
+    width:auto;
+    overflow:auto;
+   
+    border:4px solid black;
+    background-color: rgb(216,96,32);
+    color:black;
+    
+    margin-top: 40px;
+    margin-left:40px;
+    margin-right: 40px;
+}
+
+li{ //band info
+    padding-left: 20px;
+}
+ 
+
+
+#oasis{ //img
+    height: 200px;
+    width:550px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#blossoms{
+    height:300px; //img
+    width:500px;
+    padding-left: 150px;
+    padding-right: 100px;
+}
+
+#albums{
+    height:300px;
+    width:480px;
+    padding-left:100px;
+    padding-right:100px;
+}
+
+.StoneRosesImg{
+    // grid-row: 2;
+    // grid-column:2;
+   
+    color: rgb(187, 187, 194);
+}
+
+#RosesOld{
+  
+    height:500px;
+    width:700px;
+    padding-left: 40px;
+    padding-right:20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+ 
+}
+
+.FindRoses{
+    // grid-row: 2;
+    // grid-column:2;
+   
+    color: rgb(187, 187, 194);
+
+    a{
+        text-decoration: none;
+        color:  rgb(187, 187, 194);  
+      
+    }
+
+}
+#RosesPerform{
+      
+    height:500px;
+    width:700px;
+    padding-left: 40px;
+    padding-right:20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.moreInfo{
+
+    border:4px solid rgb(187, 187, 194);  
+   background-color: rgb(61, 61, 61);
+   opacity: 0.9; 
+   color: white;
+ 
+    // grid-row: 2;
+    // grid-column:1;
+    margin-top: 50px;
+    margin-bottom:60px;
+    margin-left: 50px;
+   
+    a{
+        text-decoration: none;
+        color:  rgb(187, 187, 194);  
+      
+    }
+
+  
+    ul {
+        padding: 0px;
+    }
+
+    li {
+    
+        padding-right: 30px;
+        padding-left:30px;
+        padding-bottom:20px;
+        padding-top:2 0px;
+        list-style-type: none;
+
+        @include mobile() {
+            padding: 0px 10px;
+        }
+    }
+
+    img {
+        width: 80px;
+
+        @include mobile() {
+            width: 40px;
+        }
+    }
+}
+
+
+#social {
+    background-color:black;
+    opacity: 0.7;
+    padding: 30px;
+    clear: both;
+    text-align: center;
+
+    ul {
+        padding: 0px;
+    }
+
+    li {
+        display: inline;
+        padding: 0px 20px;
+        list-style-type: none;
+
+        @include mobile() {
+            padding: 0px 10px;
+        }
+    }
+
+    img {
+        width: 60px;
+
+        @include mobile() {
+            width: 40px;
+        }
+    }
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+
+.column{
+    float:left;
+    width:33.3%;
+    
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+
+    font-size: 24;
+    color:orange;
+    display:block;
+    text-decoration: none;
+   
+    background-color: grey;
+    opacity: 0.9;
+
+
+@include tablet-mobile(){
+    width:100px;
+}
+    @include mobile{
+        width:100px
+    }
+}
+
+// Changes the link color ect
+.column a{ 
+    color:orange;
+    display:block;
+    padding:10px;
+    padding-left:20px;
+    text-decoration: none;
+
+}
+.row:after{
+    content:"";
+    display:table;
+    clear:both;
+
+}
+
+
+  
+
+footer{
+    
+    background-color: black;
+    height:80px;
+    opacity: 0.7;
+}
